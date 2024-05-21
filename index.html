@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cryptex - Buy & Sell Digital Assets In The cryptex</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg" />
+    <!-- Google Fonts - DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- IonIcons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="assets/images/logo.svg"
+            width="32"
+            height="32"
+            alt="Cryptex logo"
+          />
+          Cryptex
+        </a>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li class="link"><a href="#" class="active">HomePage</a></li>
+            <li class="link"><a href="#">Buy Crypto</a></li>
+            <li class="link"><a href="#">Markets</a></li>
+            <li class="link"><a href="#">Sell Crypto</a></li>
+            <li class="link"><a href="#">Blog</a></li>
+            <li class="link"><a href="#">BITUSDT</a></li>
+          </ul>
+        </nav>
+        <div class="nav-right">
+          <ion-icon
+            name="menu"
+            id="menu"
+            onclick="changeIcon(this, 'menu', 'close')"
+          ></ion-icon>
+          <a href="#" class="btn">Wallet</a>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="container hero">
+        <div class="col">
+          <h1 class="hero-title">Buy & Sell Digital Assets In The Cryptex</h1>
+          <p class="hero-desc">
+            Coin Cryptex is the easiest, safest, and fastest way to buy & sell
+            crypto asset exchange.
+          </p>
+          <a href="#" class="section-btn">Get started now</a>
+        </div>
+        <div class="col">
+          <div class="hero-img">
+            <img src="assets/images/hero-banner.png" alt="hero banner" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Market Section -->
+    <section class="section market">
+      <div class="container">
+        <div class="market-title">
+          <h3 class="section-title">Market Update</h3>
+          <a href="#">See All Coins</a>
+        </div>
+        <div class="market-table-wrapper">
+          <table class="market-table">
+            <thead>
+              <tr class="table-title">
+                <th></th>
+                <th>#</th>
+                <th>Name</th>
+                <th>Last Price</th>
+                <th>24h %</th>
+                <th class="hidden-mobile">Market Cap</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- How it work -->
+    <section class="section hiw">
+      <div class="container">
+        <div class="title-container">
+          <h3 class="section-title">How It Work</h3>
+          <p class="section-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            molestias corporis velit, quas
+          </p>
+        </div>
+        <div class="steps-container">
+          <div class="step">
+            <img class="step-img" src="assets/images/instruction-1.png" alt="Download" />
+            <p>step 1</p>
+            <h4>Download</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              molestias corporis velit, quas
+            </p>
+          </div>
+
+          <div class="step">
+            <img class="step-img" src="assets/images/instruction-2.png" alt="Download" />
+            <p>step 2</p>
+            <h4>Connect Wallet</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              molestias corporis velit, quas
+            </p>
+          </div>
+
+          <div class="step">
+            <img class="step-img" src="assets/images/instruction-3.png" alt="Download" />
+            <p>step 3</p>
+            <h4>Start Trading</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              molestias corporis velit, quas
+            </p>
+          </div>
+
+          <div class="step">
+            <img class="step-img" src="assets/images/instruction-4.png" alt="Download" />
+            <p>step 4</p>
+            <h4>Earn Money</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              molestias corporis velit, quas
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- to preload star icon -->
+    <ion-icon name="star" class="hidden"></ion-icon>
+    <!-- to preload the close icon -->
+    <ion-icon name="close" class="hidden"></ion-icon>
+    <!-- JS file -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
