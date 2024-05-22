@@ -104,7 +104,7 @@ button {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-inline: 5px;
+  padding-inline: 20px;
 }
 
 .btn {
@@ -173,6 +173,10 @@ button {
   background-color: var(--eerie-black-1);
 }
 
+.bg-body {
+  background-color: var(--eerie-black-2);
+}
+
 .hidden {
   display: none;
 }
@@ -192,7 +196,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 10px;
   position: relative;
 }
 
@@ -437,7 +441,8 @@ td {
 }
 
 .step::after {
-  content: "";
+  content: url("../assets/images/connect-line.png");
+  display: none;
   position: absolute;
   width: 160px;
   height: 12px;
@@ -512,9 +517,93 @@ td {
   margin-top: 20px;
 }
 
+.app-img {
+  position: relative;
+}
+
+.scan {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  border: 2px solid var(--white);
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  padding-block: 50px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-brand h3 {
+  font-size: 1.4rem;
+}
+
+.footer-brand p,
+.footer-brand address {
+  color: var(--cadet-blue-crayola);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: var(--gainsboro);
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--blue-crayola);
+}
+
+.footer-list-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--cadet-blue-crayola);
+  padding-block: 20px;
+}
+
+.rights a {
+  color: var(--blue-crayola);
+  display: unset;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.3rem;
+}
+
+.socials a {
+  color: var(--cadet-blue-crayola);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -525,12 +614,21 @@ td {
   .container {
     width: 540px;
   }
+  .footer-bottom {
+    flex-direction: row;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .container {
     width: 720px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding-block: 10px;
   }
 }
 
@@ -542,9 +640,6 @@ td {
 
   #menu {
     display: none;
-  }
-  .header {
-    padding-block: 5px;
   }
   .navbar {
     all: unset;
@@ -579,11 +674,11 @@ td {
     grid-template-columns: 1fr 1fr;
   }
   .step::after {
-    content: url("../assets/images/connect-line.png");
+    display: unset;
   }
 
   .step:nth-child(2)::after {
-    content: "";
+    display: none;
   }
 
   .about-container {
@@ -600,7 +695,7 @@ td {
     grid-template-columns: repeat(4, 1fr);
   }
   .step:nth-child(2):after {
-    content: url("../assets/images/connect-line.png");
+    display: unset;
   }
 }
 
