@@ -4,27 +4,25 @@ let navLinks = document.querySelectorAll(".link a");
 let tableBody = document.getElementById("table-body");
 
 // Format price into USD
-let USDollar = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
+let USDollar = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
 });
 
-
-// fetch coin data from my coingecko proxy
-async function getCoins() {
+const getCoins = async () => {
   try {
     const response = await fetch(
-      "https://coingecko-proxy-nodejs.vercel.app/coins",
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&x_cg_demo_api_key=${API_KEY}`,
     );
     if (!response.ok) {
-      throw new Error("Failde to fetch data");
+      return console.error("Failed to fetch data");
     }
     let coins = await response.json();
     return coins;
   } catch (err) {
     console.error("Error fetching data", err);
   }
-}
+};
 
 // populate market with coin information
 async function populateTable() {
@@ -32,7 +30,7 @@ async function populateTable() {
   tableBody.innerHTML = coins
     .map(
       (coin) =>
-    `<tr class="table-row">
+        `<tr class="table-row">
       <td>
         <button type="button" class="table-star">
           <ion-icon
@@ -60,7 +58,7 @@ async function populateTable() {
 
 populateTable();
 
-// Change element icon
+// Change menu element icon
 function changeIcon(el, n1, n2) {
   let name = el.getAttribute("name");
   if (name == n1) {
@@ -72,13 +70,13 @@ function changeIcon(el, n1, n2) {
 }
 
 // Toggle Mobile Navigation
-menu.addEventListener("click", function () {
+menu.addEventListener("click", function() {
   nav.classList.toggle("active");
 });
 
 // Highlight link on click & close mobile navigation & change menu icon
 navLinks.forEach((link) => {
-  link.addEventListener("click", function (e) {
+  link.addEventListener("click", function(e) {
     navLinks.forEach((link) => {
       link.classList.remove("active");
     });

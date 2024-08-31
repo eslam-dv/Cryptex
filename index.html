@@ -1,330 +1,291 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cryptex - Buy & Sell Digital Assets In The cryptex</title>
-    <link rel="icon" type="image/x-icon" href="favicon.svg" />
-    <!-- Google Fonts - DM Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- IonIcons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
-    ></script>
-  </head>
-  <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-      <div class="container">
-        <a href="#" class="logo">
-          <img
-            src="assets/images/logo.svg"
-            width="32"
-            height="32"
-            alt="Cryptex logo"
-          />
-          Cryptex
-        </a>
-        <nav class="navbar">
-          <ul class="nav-links">
-            <li class="link"><a href="#" class="active">HomePage</a></li>
-            <li class="link"><a href="#">Buy Crypto</a></li>
-            <li class="link"><a href="#">Markets</a></li>
-            <li class="link"><a href="#">Sell Crypto</a></li>
-            <li class="link"><a href="#">Blog</a></li>
-            <li class="link"><a href="#">BITUSDT</a></li>
-          </ul>
-        </nav>
-        <div class="nav-right">
-          <ion-icon
-            name="menu"
-            id="menu"
-            onclick="changeIcon(this, 'menu', 'close')"
-          ></ion-icon>
-          <a href="#" class="btn">Wallet</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cryptex - Buy & Sell Digital Assets In The cryptex</title>
+  <link rel="icon" type="image/x-icon" href="favicon.svg" />
+  <!-- Google Fonts - DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- IonIcons -->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/images/logo.svg" width="32" height="32" alt="Cryptex logo" />
+        Cryptex
+      </a>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li class="link"><a href="#" class="active">HomePage</a></li>
+          <li class="link"><a href="#">Buy Crypto</a></li>
+          <li class="link"><a href="#">Markets</a></li>
+          <li class="link"><a href="#">Sell Crypto</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+          <li class="link"><a href="#">BITUSDT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <ion-icon name="menu" id="menu" onclick="changeIcon(this, 'menu', 'close')"></ion-icon>
+        <a href="#" class="btn">Wallet</a>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="section">
+    <div class="container hero">
+      <div class="col">
+        <h1 class="hero-title">Buy & Sell Digital Assets In The Cryptex</h1>
+        <p class="hero-desc">
+          Coin Cryptex is the easiest, safest, and fastest way to buy & sell
+          crypto asset exchange.
+        </p>
+        <a href="#" class="section-btn">Get started now</a>
+      </div>
+      <div class="col">
+        <div class="hero-img">
+          <img src="assets/images/hero-banner.png" alt="hero banner" />
         </div>
       </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="section">
-      <div class="container hero">
-        <div class="col">
-          <h1 class="hero-title">Buy & Sell Digital Assets In The Cryptex</h1>
-          <p class="hero-desc">
-            Coin Cryptex is the easiest, safest, and fastest way to buy & sell
-            crypto asset exchange.
-          </p>
-          <a href="#" class="section-btn">Get started now</a>
-        </div>
-        <div class="col">
-          <div class="hero-img">
-            <img src="assets/images/hero-banner.png" alt="hero banner" />
-          </div>
-        </div>
+    </div>
+  </section>
+  <!-- Market Section -->
+  <section class="section bg-black">
+    <div class="container">
+      <div class="market-title">
+        <h3 class="section-title">Market Update</h3>
+        <a href="#">See All Coins</a>
       </div>
-    </section>
-    <!-- Market Section -->
-    <section class="section bg-black">
-      <div class="container">
-        <div class="market-title">
-          <h3 class="section-title">Market Update</h3>
-          <a href="#">See All Coins</a>
-        </div>
-        <div class="market-table-wrapper">
-          <table class="market-table">
-            <thead>
-              <tr class="table-title">
-                <th></th>
-                <th>#</th>
-                <th>Name</th>
-                <th>Last Price</th>
-                <th>24h %</th>
-                <th class="hidden-mobile">Market Cap</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="table-body"></tbody>
-          </table>
-        </div>
+      <div class="market-table-wrapper">
+        <table class="market-table">
+          <thead>
+            <tr class="table-title">
+              <th></th>
+              <th>#</th>
+              <th>Name</th>
+              <th>Last Price</th>
+              <th>24h %</th>
+              <th class="hidden-mobile">Market Cap</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
       </div>
-    </section>
-    <!-- How it work -->
-    <section class="section hiw">
-      <div class="container">
-        <div class="title-container">
-          <h3 class="section-title">How It Work</h3>
-          <p class="section-text">
+    </div>
+  </section>
+  <!-- How it work -->
+  <section class="section hiw">
+    <div class="container">
+      <div class="title-container">
+        <h3 class="section-title">How It Work</h3>
+        <p class="section-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          molestias corporis velit, quas
+        </p>
+      </div>
+      <div class="steps-container">
+        <div class="step">
+          <img class="step-img" src="assets/images/instruction-1.png" alt="Download" />
+          <p>step 1</p>
+          <h4>Download</h4>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             molestias corporis velit, quas
           </p>
         </div>
-        <div class="steps-container">
-          <div class="step">
-            <img
-              class="step-img"
-              src="assets/images/instruction-1.png"
-              alt="Download"
-            />
-            <p>step 1</p>
-            <h4>Download</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              molestias corporis velit, quas
-            </p>
-          </div>
 
-          <div class="step">
-            <img
-              class="step-img"
-              src="assets/images/instruction-2.png"
-              alt="Download"
-            />
-            <p>step 2</p>
-            <h4>Connect Wallet</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              molestias corporis velit, quas
-            </p>
-          </div>
-
-          <div class="step">
-            <img
-              class="step-img"
-              src="assets/images/instruction-3.png"
-              alt="Download"
-            />
-            <p>step 3</p>
-            <h4>Start Trading</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              molestias corporis velit, quas
-            </p>
-          </div>
-
-          <div class="step">
-            <img
-              class="step-img"
-              src="assets/images/instruction-4.png"
-              alt="Download"
-            />
-            <p>step 4</p>
-            <h4>Earn Money</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              molestias corporis velit, quas
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section -->
-    <section class="section bg-black">
-      <div class="container about-container">
-        <div class="col about-img">
-          <img src="assets/images/about-banner.png" alt="about-banner" />
-        </div>
-        <div class="col about-txt">
-          <h3>What Is Cryptex</h3>
+        <div class="step">
+          <img class="step-img" src="assets/images/instruction-2.png" alt="Download" />
+          <p>step 2</p>
+          <h4>Connect Wallet</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-            mollitia quis dolorum dicta at sed magni neque, consequatur soluta
-            repudiandae et odit esse possimus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            molestias corporis velit, quas
           </p>
-          <h5>
-            <ion-icon name="checkmark-circle" class="checkmark"></ion-icon> View
-            real-time cryptocurrency prices
-          </h5>
+        </div>
+
+        <div class="step">
+          <img class="step-img" src="assets/images/instruction-3.png" alt="Download" />
+          <p>step 3</p>
+          <h4>Start Trading</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-            mollitia quis dolorum dicta at sed magni neque, consequatur soluta
-            repudiandae et odit esse possimus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            molestias corporis velit, quas
           </p>
+        </div>
 
-          <h5>
-            <ion-icon name="checkmark-circle" class="checkmark"></ion-icon> Buy
-            and sell BTC, ETH, XRP, OKB, Etc...
-          </h5>
+        <div class="step">
+          <img class="step-img" src="assets/images/instruction-4.png" alt="Download" />
+          <p>step 4</p>
+          <h4>Earn Money</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-            mollitia quis dolorum dicta at sed magni neque, consequatur soluta
-            repudiandae et odit esse possimus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            molestias corporis velit, quas
           </p>
-          <a href="#" class="section-btn">Explore More</a>
         </div>
       </div>
-    </section>
-    <!-- Download App -->
-    <section class="section">
-      <div class="container about-container">
-        <div class="col about-txt">
-          <h3>Free Your Money & Invest With Confident</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            quidem!
-          </p>
-          <h5>
-            <ion-icon name="checkmark-circle" class="checkmark"></ion-icon>
-            Buy, Sell, And Trade On The Go
-          </h5>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="section bg-black">
+    <div class="container about-container">
+      <div class="col about-img">
+        <img src="assets/images/about-banner.png" alt="about-banner" />
+      </div>
+      <div class="col about-txt">
+        <h3>What Is Cryptex</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+          mollitia quis dolorum dicta at sed magni neque, consequatur soluta
+          repudiandae et odit esse possimus.
+        </p>
+        <h5>
+          <ion-icon name="checkmark-circle" class="checkmark"></ion-icon> View
+          real-time cryptocurrency prices
+        </h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+          mollitia quis dolorum dicta at sed magni neque, consequatur soluta
+          repudiandae et odit esse possimus.
+        </p>
 
-          <h5>
-            <ion-icon name="checkmark-circle" class="checkmark"></ion-icon>Take
-            Control Of Your Wealth
-          </h5>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-          <div class="app-links">
-            <a href="#"
-              ><img src="assets/images/googleplay.png" alt="play store"
-            /></a>
-            <a href="#"
-              ><img src="assets/images/appstore.png" alt="app store"
-            /></a>
-          </div>
-        </div>
+        <h5>
+          <ion-icon name="checkmark-circle" class="checkmark"></ion-icon> Buy
+          and sell BTC, ETH, XRP, OKB, Etc...
+        </h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+          mollitia quis dolorum dicta at sed magni neque, consequatur soluta
+          repudiandae et odit esse possimus.
+        </p>
+        <a href="#" class="section-btn">Explore More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Download App -->
+  <section class="section">
+    <div class="container about-container">
+      <div class="col about-txt">
+        <h3>Free Your Money & Invest With Confident</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+          quidem!
+        </p>
+        <h5>
+          <ion-icon name="checkmark-circle" class="checkmark"></ion-icon>
+          Buy, Sell, And Trade On The Go
+        </h5>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
 
-        <div class="col about-img app-img">
-          <img src="assets/images/app-banner.png" alt="app-banner" />
-          <div class="scan">Scan To Download</div>
+        <h5>
+          <ion-icon name="checkmark-circle" class="checkmark"></ion-icon>Take
+          Control Of Your Wealth
+        </h5>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="app-links">
+          <a href="#"><img src="assets/images/googleplay.png" alt="play store" /></a>
+          <a href="#"><img src="assets/images/appstore.png" alt="app store" /></a>
         </div>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-black">
-      <div class="container footer-top">
-        <div class="footer-brand">
-          <a href="#" class="logo"
-            ><img
-              src="assets/images/logo.svg"
-              alt="logo"
-              width="40"
-              height="40"
-            />Cryptex</a
-          >
-          <h3>Let's Talk! 🤙</h3>
-          <p>+12 345 678 910</p>
-          <p>example@email.com</p>
-          <address>497 London Bridge Rd Virginia Beach</address>
-        </div>
-        <ul class="footer-list">
-          <li><p class="footer-list-title">Products</p></li>
-          <li><a href="#" class="footer-link">Spot</a></li>
-          <li><a href="#" class="footer-link">Inverse Perpetual</a></li>
-          <li><a href="#" class="footer-link">USDT Perpetual</a></li>
-          <li><a href="#" class="footer-link">Exchange</a></li>
-          <li><a href="#" class="footer-link">Luanchpad</a></li>
-          <li><a href="#" class="footer-link">Binance Pay</a></li>
-        </ul>
 
-        <ul class="footer-list">
-          <li><p class="footer-list-title">Services</p></li>
-          <li><a href="#" class="footer-link">Buy Crypto</a></li>
-          <li><a href="#" class="footer-link">Markets</a></li>
-          <li><a href="#" class="footer-link">Trading Fee</a></li>
-          <li><a href="#" class="footer-link">Affiliate Program</a></li>
-          <li><a href="#" class="footer-link">Referral Program</a></li>
-          <li><a href="#" class="footer-link">API</a></li>
-        </ul>
-
-        <ul class="footer-list">
-          <li><p class="footer-list-title">Support</p></li>
-          <li><a href="#" class="footer-link">Bybit Learn</a></li>
-          <li><a href="#" class="footer-link">Help Center</a></li>
-          <li><a href="#" class="footer-link">User Feedback</a></li>
-          <li><a href="#" class="footer-link">Submit a request</a></li>
-          <li><a href="#" class="footer-link">API Documnetaion</a></li>
-          <li><a href="#" class="footer-link">Trading Rules</a></li>
-        </ul>
-
-        <ul class="footer-list">
-          <li><p class="footer-list-title">About Us</p></li>
-          <li><a href="#" class="footer-link">About Bybit</a></li>
-          <li><a href="#" class="footer-link">Authenticity Check</a></li>
-          <li><a href="#" class="footer-link">Careers</a></li>
-          <li><a href="#" class="footer-link">Bussines Contacts</a></li>
-          <li><a href="#" class="footer-link">Blog</a></li>
-        </ul>
+      <div class="col about-img app-img">
+        <img src="assets/images/app-banner.png" alt="app-banner" />
+        <div class="scan">Scan To Download</div>
       </div>
-      <div class="bg-body">
-        <div class="container footer-bottom">
-          <p class="rights">
-            &#169; 2022 Cryptex All Rights Reserved by
-            <a href="#">codewithsadee</a>
-          </p>
-          <div class="socials">
-            <a href="#" class="footer-link"
-              ><ion-icon name="logo-facebook"></ion-icon
-            ></a>
-            <a href="#" class="footer-link"
-              ><ion-icon name="logo-twitter"></ion-icon
-            ></a>
-            <a href="#" class="footer-link"
-              ><ion-icon name="logo-instagram"></ion-icon
-            ></a>
-            <a href="#" class="footer-link"
-              ><ion-icon name="logo-linkedin"></ion-icon
-            ></a>
-          </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-black">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo"><img src="assets/images/logo.svg" alt="logo" width="40" height="40" />Cryptex</a>
+        <h3>Let's Talk! 🤙</h3>
+        <p>+12 345 678 910</p>
+        <p>example@email.com</p>
+        <address>497 London Bridge Rd Virginia Beach</address>
+      </div>
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Products</p>
+        </li>
+        <li><a href="#" class="footer-link">Spot</a></li>
+        <li><a href="#" class="footer-link">Inverse Perpetual</a></li>
+        <li><a href="#" class="footer-link">USDT Perpetual</a></li>
+        <li><a href="#" class="footer-link">Exchange</a></li>
+        <li><a href="#" class="footer-link">Luanchpad</a></li>
+        <li><a href="#" class="footer-link">Binance Pay</a></li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Services</p>
+        </li>
+        <li><a href="#" class="footer-link">Buy Crypto</a></li>
+        <li><a href="#" class="footer-link">Markets</a></li>
+        <li><a href="#" class="footer-link">Trading Fee</a></li>
+        <li><a href="#" class="footer-link">Affiliate Program</a></li>
+        <li><a href="#" class="footer-link">Referral Program</a></li>
+        <li><a href="#" class="footer-link">API</a></li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">Support</p>
+        </li>
+        <li><a href="#" class="footer-link">Bybit Learn</a></li>
+        <li><a href="#" class="footer-link">Help Center</a></li>
+        <li><a href="#" class="footer-link">User Feedback</a></li>
+        <li><a href="#" class="footer-link">Submit a request</a></li>
+        <li><a href="#" class="footer-link">API Documnetaion</a></li>
+        <li><a href="#" class="footer-link">Trading Rules</a></li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <p class="footer-list-title">About Us</p>
+        </li>
+        <li><a href="#" class="footer-link">About Bybit</a></li>
+        <li><a href="#" class="footer-link">Authenticity Check</a></li>
+        <li><a href="#" class="footer-link">Careers</a></li>
+        <li><a href="#" class="footer-link">Bussines Contacts</a></li>
+        <li><a href="#" class="footer-link">Blog</a></li>
+      </ul>
+    </div>
+    <div class="bg-body">
+      <div class="container footer-bottom">
+        <p class="rights">
+          &#169; 2022 Cryptex All Rights Reserved by
+          <a href="#">codewithsadee</a>
+        </p>
+        <div class="socials">
+          <a href="#" class="footer-link"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="footer-link"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#" class="footer-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#" class="footer-link"><ion-icon name="logo-linkedin"></ion-icon></a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- to preload star icon -->
-    <ion-icon name="star" class="hidden"></ion-icon>
-    <!-- to preload the close icon -->
-    <ion-icon name="close" class="hidden"></ion-icon>
-    <!-- JS file -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- to preload star icon -->
+  <ion-icon name="star" class="hidden"></ion-icon>
+  <!-- to preload the close icon -->
+  <ion-icon name="close" class="hidden"></ion-icon>
+  <!-- JS file -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
