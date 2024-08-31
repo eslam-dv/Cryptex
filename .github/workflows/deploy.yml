@@ -8,14 +8,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
+
     - name: Create config file
-      run: cd js && echo -e "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
-      
+      run: echo "const API_KEY = '${{ secrets.API_KEY }}';" > js/config.js
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
