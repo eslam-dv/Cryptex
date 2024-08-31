@@ -16,7 +16,6 @@ jobs:
 
     - name: Generate config.js
       run: |
-        mkdir -p js
         echo "const API_KEY = '${{ secrets.API_KEY }}';" > js/config.js
 
     - name: Commit and push config.js
