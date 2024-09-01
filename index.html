@@ -3,27 +3,26 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cryptex - Buy & Sell Digital Assets In The cryptex</title>
-  <link rel="icon" type="image/x-icon" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./src/favicon.svg" />
   <!-- Google Fonts - DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/style.css" />
   <!-- IonIcons -->
   <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  <title>Cryptex</title>
 </head>
 
 <body>
-  <!-- Header & Navigation -->
   <header class="header">
     <div class="container">
       <a href="#" class="logo">
-        <img src="assets/images/logo.svg" width="32" height="32" alt="Cryptex logo" />
+        <img src="src/assets/images/logo.svg" width="32" height="32" alt="Cryptex logo" />
         Cryptex
       </a>
       <nav class="navbar">
@@ -37,7 +36,7 @@
         </ul>
       </nav>
       <div class="nav-right">
-        <ion-icon name="menu" id="menu" onclick="changeIcon(this, 'menu', 'close')"></ion-icon>
+        <ion-icon name="menu" id="menu"></ion-icon>
         <a href="#" class="btn">Wallet</a>
       </div>
     </div>
@@ -55,7 +54,7 @@
       </div>
       <div class="col">
         <div class="hero-img">
-          <img src="assets/images/hero-banner.png" alt="hero banner" />
+          <img src="src/assets/images/hero-banner.png" alt="hero banner" />
         </div>
       </div>
     </div>
@@ -80,7 +79,8 @@
               <th></th>
             </tr>
           </thead>
-          <tbody id="table-body"></tbody>
+          <tbody id="table-body">
+          </tbody>
         </table>
       </div>
     </div>
@@ -97,7 +97,7 @@
       </div>
       <div class="steps-container">
         <div class="step">
-          <img class="step-img" src="assets/images/instruction-1.png" alt="Download" />
+          <img class="step-img" src="src/assets/images/instruction-1.png" alt="Download" />
           <p>step 1</p>
           <h4>Download</h4>
           <p>
@@ -107,7 +107,7 @@
         </div>
 
         <div class="step">
-          <img class="step-img" src="assets/images/instruction-2.png" alt="Download" />
+          <img class="step-img" src="src/assets/images/instruction-2.png" alt="Download" />
           <p>step 2</p>
           <h4>Connect Wallet</h4>
           <p>
@@ -117,7 +117,7 @@
         </div>
 
         <div class="step">
-          <img class="step-img" src="assets/images/instruction-3.png" alt="Download" />
+          <img class="step-img" src="src/assets/images/instruction-3.png" alt="Download" />
           <p>step 3</p>
           <h4>Start Trading</h4>
           <p>
@@ -127,7 +127,7 @@
         </div>
 
         <div class="step">
-          <img class="step-img" src="assets/images/instruction-4.png" alt="Download" />
+          <img class="step-img" src="src/assets/images/instruction-4.png" alt="Download" />
           <p>step 4</p>
           <h4>Earn Money</h4>
           <p>
@@ -142,7 +142,7 @@
   <section class="section bg-black">
     <div class="container about-container">
       <div class="col about-img">
-        <img src="assets/images/about-banner.png" alt="about-banner" />
+        <img src="src/assets/images/about-banner.png" alt="about-banner" />
       </div>
       <div class="col about-txt">
         <h3>What Is Cryptex</h3>
@@ -195,13 +195,13 @@
         </h5>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
         <div class="app-links">
-          <a href="#"><img src="assets/images/googleplay.png" alt="play store" /></a>
-          <a href="#"><img src="assets/images/appstore.png" alt="app store" /></a>
+          <a href="#"><img src="src/assets/images/googleplay.png" alt="play store" /></a>
+          <a href="#"><img src="src/assets/images/appstore.png" alt="app store" /></a>
         </div>
       </div>
 
       <div class="col about-img app-img">
-        <img src="assets/images/app-banner.png" alt="app-banner" />
+        <img src="src/assets/images/app-banner.png" alt="app-banner" />
         <div class="scan">Scan To Download</div>
       </div>
     </div>
@@ -210,7 +210,7 @@
   <footer class="bg-black">
     <div class="container footer-top">
       <div class="footer-brand">
-        <a href="#" class="logo"><img src="assets/images/logo.svg" alt="logo" width="40" height="40" />Cryptex</a>
+        <a href="#" class="logo"><img src="src/assets/images/logo.svg" alt="logo" width="40" height="40" />Cryptex</a>
         <h3>Let's Talk! 🤙</h3>
         <p>+12 345 678 910</p>
         <p>example@email.com</p>
@@ -278,14 +278,11 @@
       </div>
     </div>
   </footer>
-
   <!-- to preload star icon -->
   <ion-icon name="star" class="hidden"></ion-icon>
   <!-- to preload the close icon -->
   <ion-icon name="close" class="hidden"></ion-icon>
-  <!-- JS file -->
-  <script src="js/config.js"></script>
-  <script src="js/main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

@@ -5,37 +5,36 @@ let tableBody = document.getElementById("table-body");
 
 // Format price into USD
 let USDollar = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
+	style: "currency",
+	currency: "USD",
 });
 
 const getCoins = async () => {
-  try {
-    const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&x_cg_demo_api_key=${API_KEY}`,
-    );
-    if (!response.ok) {
-      return console.error("Failed to fetch data");
-    }
-    let coins = await response.json();
-    return coins;
-  } catch (err) {
-    console.error("Error fetching data", err);
-  }
+	try {
+		const response = await fetch(
+			`https://api.coingecko.com/api/v3/coins/markets?per_page=10&vs_currency=usd&x_cg_demo_api_key=${import.meta.env.VITE_API_KEY}`,
+		);
+		if (!response.ok) {
+			return console.error("Failed to fetch data");
+		}
+		let coins = await response.json();
+		return coins;
+	} catch (err) {
+		console.error("Error fetching data", err);
+	}
 };
 
 // populate market with coin information
 async function populateTable() {
-  let coins = await getCoins();
-  tableBody.innerHTML = coins
-    .map(
-      (coin) =>
-        `<tr class="table-row">
+	let coins = await getCoins();
+	tableBody.innerHTML = coins
+		.map(
+			(coin) =>
+				`<tr class="table-row ${coin.id}">
       <td>
         <button type="button" class="table-star">
           <ion-icon
             name="star-outline"
-            onclick="changeIcon(this, 'star', 'star-outline')"
           ></ion-icon>
         </button>
       </td>
@@ -52,36 +51,44 @@ async function populateTable() {
       <td class="bold hidden-mobile">${USDollar.format(coin.market_cap)}</td>
       <td><a href="#" class="btn trade">Trade</a></td>
     </tr>`,
-    )
-    .join("");
+		)
+		.join("");
+	let starIcons = document.querySelectorAll(".table-star > ion-icon");
+	starIcons.forEach((icon) => {
+		icon.addEventListener("click", function () {
+			changeIcon(this, "star-outline", "star");
+		});
+	});
 }
 
 populateTable();
 
 // Change menu element icon
+// used in html
 function changeIcon(el, n1, n2) {
-  let name = el.getAttribute("name");
-  if (name == n1) {
-    el.setAttribute("name", n2);
-  } else {
-    el.setAttribute("name", n1);
-  }
-  el.classList.toggle("active");
+	let name = el.getAttribute("name");
+	if (name == n1) {
+		el.setAttribute("name", n2);
+	} else {
+		el.setAttribute("name", n1);
+	}
+	el.classList.toggle("active");
 }
 
 // Toggle Mobile Navigation
-menu.addEventListener("click", function() {
-  nav.classList.toggle("active");
+menu.addEventListener("click", function () {
+	nav.classList.toggle("active");
+	changeIcon(this, "menu", "close");
 });
 
 // Highlight link on click & close mobile navigation & change menu icon
 navLinks.forEach((link) => {
-  link.addEventListener("click", function(e) {
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-    });
-    e.target.classList.add("active");
-    nav.classList.remove("active");
-    menu.setAttribute("name", "menu");
-  });
+	link.addEventListener("click", function (e) {
+		navLinks.forEach((link) => {
+			link.classList.remove("active");
+		});
+		e.target.classList.add("active");
+		nav.classList.remove("active");
+		menu.setAttribute("name", "menu");
+	});
 });
