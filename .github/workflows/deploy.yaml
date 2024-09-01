@@ -34,11 +34,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build # will run `yarn build` command
+        env:
+          VITE_API_KEY: ${{ secrets.API_KEY }} # store the api key in an environment variable
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -49,5 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        env:
-          VITE_API_KEY: ${{ secrets.API_KEY }} # store the api key in an environment variable
